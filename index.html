@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Emoji Maker Test</title>
+</head>
+
+<style>
+	.img_select {
+	  border: 1px solid #ddd; /* Gray border */
+	  border-radius: 4px;  /* Rounded border */
+	  padding: 5px; /* Some padding */
+	  width: 150px; /* Set a small width */
+	}
+
+	.img_select:hover {
+	  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+</style>
+
+<body>
+<!-- https://codepen.io/charlotterushen/pen/VoQVWB -->
+<!-- FACES -->
+<div class="container" style="position: relative; z-index: 10; top:10px; left:10px;">
+<h1>FACE</h1>
+	<a target="_blank" onclick="show_face1()">
+	  <img src="bitmoji/face1.png" class="img_select" id="face1" alt="face1">
+	</a>
+	<a target="_blank" onclick="show_face2()">
+	  <img src="bitmoji/face2.png" class="img_select" id="face2" alt="face2">
+	</a>
+</div>
+
+<!-- EYES -->
+<div class="container" style="position: relative; z-index: 11; top:10px; left:10px;">
+<h1>EYES</h1>
+	<a target="_blank" onclick="show_eyes1()">
+	  <img src="bitmoji/eyes1.png" class="img_select" id="eyes1" alt="eyes1">
+	</a>
+	<a target="_blank" onclick="show_eyes2()">
+	  <img src="bitmoji/eyes2.png" class="img_select" id="eyes2" alt="eyes2">
+	</a>
+</div>
+<br>
+<br>
+<buton id="foo">download</buton>
+
+<div id="myCanvas">
+	<img id="showImg" src="" style="position: relative; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+	
+	<img id="showImg_eyes" src="" style="position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+</div>
+
+<script type="text/javascript">
+	function show_face1() {
+		document.getElementById("showImg").src = "bitmoji/face1.png";
+	}
+	function show_face2() {
+		document.getElementById("showImg").src = "bitmoji/face2.png";
+	}
+
+	function show_eyes1() {
+		document.getElementById("showImg_eyes").src = "bitmoji/eyes1.png";
+	}
+	function show_eyes2() {
+		document.getElementById("showImg_eyes").src = "bitmoji/eyes2.png";
+	}
+
+
+</script>
+
+
+</body>
+</html>
